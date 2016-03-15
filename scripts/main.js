@@ -1,5 +1,17 @@
 $(document).ready(function(){
   console.log(citations);
+  
+  var listeCitation = localStorage.getItem('listeCitationLocal');
+  if(listeCitation == null)
+  {
+      var listeCitation= new Array();
+  }
+  else
+  {
+     listeCitation=JSON.parse(listeCitation);
+  }
+  
+  
 
   $("#numberField").attr("max",citations.length);
 
@@ -38,6 +50,13 @@ $(document).ready(function(){
 
   function addCitation(numeroCitation)
   {
+    
+    listeCitation.push(numeroCitation);
+    
+    contentListeCitation= JSON.stringify(listeCitation);
+    localStorage.setItem('listeCitationLocal', contentListeCitation);
+    
+    
     $("#fortune_cookie").empty();
     $("#fortune_cookie").append("<p>"+citations[numeroCitation]["citation"]+"</p>");
     $("#fortune_cookie").append("<span>"+citations[numeroCitation]["auteur"]+"</span>");
