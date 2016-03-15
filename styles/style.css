@@ -44,4 +44,39 @@ body{
 }
 #cookieForm input{
   padding:5px;
-} 
+}
+
+
+
+
+
+#nom{
+  position:absolute;
+  top:0;
+  left:0;
+  background: #FFFFFF;
+  color:#a12812;
+}
+
+#nom p{
+  margin:0;
+  padding:20px 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

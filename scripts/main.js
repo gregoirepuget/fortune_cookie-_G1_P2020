@@ -43,4 +43,31 @@ $(document).ready(function(){
     $("#fortune_cookie").append("<span>"+citations[numeroCitation]["auteur"]+"</span>");
 
   }
+  
+  $('#nom p').on("blur", function(){
+  
+      localStorage.setItem("nom", $(this).html() );
+  
+  });
+  
+  console.log(localStorage.getItem("nom"));
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 });
