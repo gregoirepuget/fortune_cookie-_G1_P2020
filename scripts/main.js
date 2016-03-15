@@ -1,9 +1,13 @@
 $(document).ready(function(){
   console.log(citations);
   
+  $("#numberField").attr("max",citations.length);
+  
+  
  $("#fortune_button").on("click",function(e){
  
    e.preventDefault();
+   
    var nombre= getTirage(citations.length);
    
    $("#fortune_cookie").empty();
