@@ -44,15 +44,32 @@ $(document).ready(function(){
 
   }
   
+  var nom=localStorage.getItem("nom");
+  if(nom != null)
+  {
+    $('#nom p').html(nom);
+  }
+  
+  
   $('#nom p').on("blur", function(){
   
       localStorage.setItem("nom", $(this).html() );
   
   });
   
-  console.log(localStorage.getItem("nom"));
+   $('#nom span').on("click",function(){
+   
+    localStorage.removeItem("nom");
+    $('#nom p').html("Votre nom");
+   });
+
   
   
+  $("#menu button").on("click", function(){
+  
+    $("#menuBox").toggleClass("open");
+    $(this).toggleClass("is-active");
+  });
   
   
   
